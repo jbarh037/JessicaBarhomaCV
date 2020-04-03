@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    @*<link rel="stylesheet" type="text/css" href="site.css" />*@
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+
+
+<body>
+    <nav class="navbar bg-transparent navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle ml-auto custom-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-page="/Index" class="navbar-brand">JESSICA BARHOMA</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="about_btn" href="#about">ABOUT</a></li>
+                    <li><a id="skill_btn" href="#skills">SKILLS</a></li>
+                    <li><a id="exp_btn" href="#experience">WORK EXPERIENCE</a></li>
+                    <li><a id="edu_btn" href="#">EDUCATION</a></li>
+                    <li><a id="contact_btn" href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="backgroundImage">
+        <div class="introText">
+            <h1>HELLO, I'M JESSICA</h1>
+            <p>
+                A motivated individual with in-depth knowledge of languages and development tools, seeking a position in a
+                growth-oriented company where I can use my skills towards the success of the company while having the scope to
+                develop new skills.
+            </p>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <div class="container cc-about">
+            <div class="h2 text-center mb-4 title">ABOUT ME</div>
+            <div class="card">
+                <div class="row" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="skills">
+        <div class="container cc-skills">
+            <div class="card">
+                <div class="row" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                    <div class="techSkills-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="toolbar">
+                            <div class='toolbar__dot toolbar__dot-left'></div>
+                            <div class='toolbar__dot toolbar__dot-middle'></div>
+                            <div class='toolbar__dot toolbar__dot-right'></div>
+                        </div>
+                        <div class="console"></div>
+                        <div class="console-txt">
+                            @*<section id="langTitle">
+                                    <p class="txt1 white lt"></p>
+                                    <p class="txt2 pink lt"></p>
+                                    <p class="txt3 blue lt"></p>
+                                    <p class="txt4 white lt"></p>
+                                    <p class="txt5 yellow lt"></p>
+                                    <p class="txt6 white lt"></p>
+                                    @*<p></</p>
+                                    <p>div</p>
+                                    <p>></p>
+                                </section>*@
+
+                            <div class="HomepageHeaderHero_codeContent-1TntE">
+                                <p class="HomepageHeaderHero_line2">
+                                    <span class="white firstSpan css-typing"></span>
+                                    <span class="pink css-typing"></span>
+                                    <span class="blue css-typing"></span>
+                                    <span class="white css-typing"></span>
+                                    <span class="yellow css-typing"></span>
+                                    <span class="white css-typing"></span>
+                                </p>
+                            </div>
+
+                            <ul id="Languages">
+                                <li> Javascript (JQuery, Node.js, Bootstrap 4, React.js) </li>
+                                <li> HTML5 & CSS </li>
+                                <li> Microsoft SQL Server</li>
+                                <li> C# </li>
+                                <li> Java </li>
+                                <li> VB.NET </li>
+                                <li> Visual Basic </li>
+                                <li> ASP.NET Core MVC </li>
+                                <li> WPF (Windows Presentatiion Foundation) </li>
+                                <li> XAML/XML </li>
+                                <li> Infragistics 2016.X </li>
+                                <li> MATLAB </li>
+                            </ul>
+                            <ul id="Tools&Platforms">
+                                <li>Microsoft Azure SaaS</li>
+                                <li>GitHub/Git</li>
+                                <li>Visual Studio 2017</li>
+                                <li>Microsoft TFS</li>
+                                <li>Jira</li>
+                                <li>Ecliplse</li>
+                                <li>Android Studio</li>
+                            </ul>
+
+                        </div>
+                        @* <video src="~/images/Media1.mp4"></video>*@
+                    </div>
+                    <div class="techSkills-right col-xs-6 col-sm-6 col-md-6 col-lg-6">SOFT SKILLS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="experience">
+        <div class="container cc-experience">
+            <div class="h2 text-center mb-4 title">WORK EXPERIENCE</div>
+            <div class="card">
+                <div class="row" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
+                    <div class="workTitle col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="row" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
+                    <div class="workTitle col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="row" data-aos="fade-up" data-aos-offset="50" data-aos-duration="500">
+                    <div class="workTitle col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @*<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="container" id="langBar">
+                        <div class="row">
+                            <div class="col-lg-4"><p>Java</p></div>
+                            <div class="col-lg-4"><p>HTML</p></div>
+                            <div class="col-lg-4"><p>VB.NET</p></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="container" id="langBar">
+                        <div class="row">
+                            <div class="col-lg-4"><p>Java</p></div>
+                            <div class="col-lg-4"><p>HTML</p></div>
+                            <div class="col-lg-4"><p>VB.NET</p></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>*@
+
+    <div class="emptyDiv2">
+        <p>Copyright 2020</p>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2020 - WebApplication1</p>
+        </footer>
+    </div>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" asp-append-version="true"></script>
+    </environment>
+    <script>
+        AOS.init();
+    </script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
