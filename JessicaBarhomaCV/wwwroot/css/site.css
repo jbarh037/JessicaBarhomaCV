@@ -129,12 +129,12 @@ body {
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-height: 300px;
     font-family: inherit;
-    display:flex;
+    display:flex; 
 }
 
-/*.row:before,*/
+.row:before,
 .row::after {
-    display: flex;
+    display: flex; 
 }
 
 
