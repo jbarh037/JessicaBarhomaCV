@@ -1,7 +1,9 @@
 
 html {
-    overflow: scroll;
+    /*overflow: scroll;*/
     height:100%;
+    overflow-x: hidden;
+    overflow-y:scroll;
 }
 
 ::-webkit-scrollbar {
@@ -125,13 +127,21 @@ body {
 
 .section .row {
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 300px;
+    min-height: 300px;
     font-family: inherit;
+    display:flex;
 }
+
+/*.row:before,*/
+.row::after {
+    display: flex;
+}
+
 
 .workTitle {
     background-color: rgb(39, 52, 77);
     height: inherit;
+    color: white;
     /*	background-image: linear-gradient(to right, rgb(39, 52, 77), white);
     border-right: linear-gradient(to right, rgb(39, 52, 77), white);
     */
@@ -228,55 +238,18 @@ body {
 
 /*work experience END*/
 
-
-/*carousel begin*/
-
-#langBar {
-    /*	border: 2px solid blue;
-*/ min-height: 100px;
-    width: 80%;
-}
-
-.col-lg-4 {
-    /*	border: 2px solid red;
-*/ min-height: 80px;
-    text-align: center;
-    padding-top: 4%;
-}
-
-
-#myCarousel {
-    color: grey;
-    opacity: 0.7;
-    font-weight: bold;
-}
-
-ol {
-    margin-bottom: -20px;
-}
-
-.carousel-indicators li {
-    background-color: grey;
-    border: 2px solid grey;
-    opacity: 0.5;
-}
-
-.carousel-indicators .active li {
-    color: white;
-    border: 2px solid grey;
-}
-
-
 .emptyDiv2 {
     height: 40px;
     background-color: rgb(88, 84, 84);
     border: 2px solid red;
 }
 
-.carousel-control.right,
-.carousel-control.left {
-    background-image: none;
-    color: navy;
+.statcan1_desc {
+    padding: 20px 15px;
 }
 
-/*carousel end*/
+.statcan1_desc > ul {
+    list-style-type: "- ";
+    /*padding-left:20px;*/
+    color: grey;
+}
