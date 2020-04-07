@@ -8,7 +8,17 @@
 // setting background image to screen height
 document.querySelector(".backgroundImage").style.height = $(window).height() + 'px';
 
-window.onscroll = function () { myFunction()};
+
+//Hamburger menu toggle
+$(".navbar-nav li a").click(function (event) {
+    // check if window is small enough so dropdown is created
+    if ($(".navbar-toggle").is(":visible")) {
+        $(".navbar-collapse").collapse('hide');
+    }
+});
+
+
+window.onscroll = function () { myFunction() };
 
 function myFunction() {
     var backImage = document.querySelector(".backgroundImage");
