@@ -1,8 +1,8 @@
 
 html {
     height:100%;
-    overflow-x: hidden;
-    overflow-y:scroll;      /* hide vertical scroll bar */
+    /*overflow-x: hidden;
+    overflow-y:scroll;*/      /* hide vertical scroll bar */
 }
 ::-webkit-scrollbar {
     display: none;
