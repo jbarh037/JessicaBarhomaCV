@@ -1,8 +1,9 @@
 
 html {
-    height:100%;
-    /*overflow-x: hidden;
-    overflow-y:scroll;*/      /* hide vertical scroll bar */
+    /*height:100%;*/
+    overflow-x: hidden;
+    overflow-y: scroll;      /* hide vertical scroll bar*/ 
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -11,7 +12,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;     /* hide vertical scroll bar */
-
 }
 
 
@@ -98,11 +98,23 @@ body {
     color: grey;
     padding:20px;
 }
-
 #about .row div:nth-child(2) img {
     width: auto;
     height: 80%;
 }
+.contactInfo {
+    flex-direction: column;
+    line-height: 3;
+}
+.contactInfo > span, .contactInfo > p {
+    width:80%;
+}
+.fa-envelope {
+    color: #D44638;
+    margin-left: 15%;
+}
+
+
 
 /* Section 2: Skills */
 #skills {
@@ -205,15 +217,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 7px 0;
 }
 .cc-experience .row {
     margin-bottom: 100px;
+    border-radius: 7px 0;
 }
 .statcan1_desc {
     padding: 20px 15px;
     display: flex;
     align-items: center;
-    color:grey;
+    color: grey;
 }
 .statcan1_desc > ul, 
 .console-txt > ul {
@@ -231,12 +245,21 @@ body {
     .introText p {
         width: 90%;
     }
+    #about .row div:nth-child(1) {
+        display:none;
+    }
     #about .row div:nth-child(2),
-    #about .row div:nth-child(3)      {
+    #about .row div:nth-child(3) {
         height: -webkit-fill-available;
+        padding: 0;
     }
     #about .row div:nth-child(2) img {
         width: -webkit-fill-available;
         height: auto;
-    }       
+        max-height: 290px;
+        margin: 10px;
+    } 
+    .workTitle {
+        padding: 20px 0;
+    } 
 }
