@@ -6,8 +6,17 @@
 //document.getElementById("about_btn").addEventListener("click", scrollFunction());
 
 // setting background image to screen height
-document.querySelector(".backgroundImage").style.height = $(window).height() + 'px';
 //document.querySelector(".navbar").style.width = $(window).width() + 'px';
+
+
+document.querySelector(".backgroundImage").style.height = $(window).height() + 'px';
+
+
+window.addEventListener("resize", reziseFunction);
+function reziseFunction() {
+    document.querySelector("nav").style.width = $(window).width() + 'px';
+}
+
 
 
 //Hamburger menu toggle

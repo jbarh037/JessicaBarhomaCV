@@ -1,7 +1,7 @@
 
 html {
     height:100%;
-    width:100%;
+    /*width:100%;*/
     /*overflow-x: hidden;*/
     /*overflow-y: scroll;*/      /* hide vertical scroll bar*/ 
     /*scroll-behavior: smooth;*/
@@ -23,8 +23,8 @@ body {
     z-index: 100;
     transition: background-color 1s ease 0s; /* navbar color transition */
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
-    width:inherit;
-    overflow-x:hidden;
+    /*max-width:375px;*/
+    /*overflow-x:hidden;*/
 }
 .navbarDark {
     background-color: rgba(39, 52, 77, 1);                                          /*navabr color=dark blue after scroll past background image*/
@@ -265,4 +265,7 @@ body {
     .workTitle {
         padding: 20px 0;
     } 
+    html, body, nav {
+        overflow-x: hidden;
+    }
 }
