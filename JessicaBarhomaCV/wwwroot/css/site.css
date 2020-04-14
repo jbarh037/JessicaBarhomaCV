@@ -1,9 +1,10 @@
 
 html {
-    /*height:100%;*/
-    overflow-x: hidden;
-    overflow-y: scroll;      /* hide vertical scroll bar*/ 
-    scroll-behavior: smooth;
+    height:100%;
+    width:100%;
+    /*overflow-x: hidden;*/
+    /*overflow-y: scroll;*/      /* hide vertical scroll bar*/ 
+    /*scroll-behavior: smooth;*/
 }
 ::-webkit-scrollbar {
     display: none;
@@ -11,17 +12,19 @@ html {
 body {
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
-    overflow-y: scroll;     /* hide vertical scroll bar */
+    /*overflow-y: scroll;*/ /* hide vertical scroll bar */
 }
 
 
 /******* NAVBAR FORMATTING *******/
 
 .navbar {
-    color: white;           /* navbar text color */
-    z-index: 100;                                                                
-    transition: background-color 1s ease 0s;                                        /* navbar color transition */
+    color: white; /* navbar text color */
+    z-index: 100;
+    transition: background-color 1s ease 0s; /* navbar color transition */
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    width:inherit;
+    overflow-x:hidden;
 }
 .navbarDark {
     background-color: rgba(39, 52, 77, 1);                                          /*navabr color=dark blue after scroll past background image*/

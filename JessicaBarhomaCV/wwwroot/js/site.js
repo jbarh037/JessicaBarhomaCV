@@ -7,7 +7,7 @@
 
 // setting background image to screen height
 document.querySelector(".backgroundImage").style.height = $(window).height() + 'px';
-//document.querySelector(".backgroundImage").style.width = $(window).width() + 'px';
+//document.querySelector(".navbar").style.width = $(window).width() + 'px';
 
 
 //Hamburger menu toggle
