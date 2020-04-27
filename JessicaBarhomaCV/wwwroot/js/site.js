@@ -11,6 +11,8 @@
 
 document.querySelector(".backgroundImage").style.height = $(window).height() + 'px';
 
+$('.envelope').tooltip('enable');
+
 
 window.addEventListener("resize", reziseFunction);
 function reziseFunction() {
@@ -45,31 +47,48 @@ function myFunction() {
 
 /* skills typewriter - START */
 var i = 0;
+var j = 0;
+var x = 0;
 var txt = 'TECHNICAL SKILLS';
 var speed = 100;
 var skillsTxtOn = false;
-var arr = ["<","div","class","=","'Languages'",">"];
+var arr = ["<","section","class","=","'Languages'","/>"];
 let HTMLCollectionSpans = document.getElementsByClassName('css-typing');
+var arr2 = ["<", "section", "class", "=", "'tools & platforms'", "/>"];
+let HTMLCollectionSpans2 = document.getElementsByClassName('css-typing2');
 var spanIndex = 0;
 var charIndex = 0;
 
 function typing() {
-    if (j < HTMLCollectionSpans.length) {
-        for (var x = 0; x < arr[j].length; x++) {
-            //setTimeout(function () {
-            var s = getChar(j, x);
-                HTMLCollectionSpans[j].innerHTML += s;
-                console.log(arr[j] + ", " + s);
-           // }, 50);          
+    if (j < HTMLCollectionSpans2.length) {
+        if (x < arr2[j].length) {
+            console.log(arr2[j] + ", " + arr2[j].charAt(x));
+            HTMLCollectionSpans2[j].innerHTML += arr2[j].charAt(x++);
+            //charIndex++;
+            setTimeout(typing, speed);
         }
-        j++;
-        setTimeout(typing,speed);
+        else {
+            x = 0;
+            j++;
+        }
+        setTimeout(typing, speed*10);
     }
+    //if (j < HTMLCollectionSpans2.length) {
+    //    for (var x = 0; x < arr2[j].length; x++) {
+    //        //setTimeout(function () {
+    //        var s = arr2[j].charAt(x);
+    //            HTMLCollectionSpans2[j].innerHTML += s;
+    //            console.log(arr2[j] + ", " + s);
+    //       // }, 50);          
+    //    }
+    //    j++;
+    //    setTimeout(typing,speed*100);
+    //}
 }
 
 function getChar(j,x) {
    // console.log(arr[j].charAt(x));
-    return arr[j].charAt(x);
+    return arr2[j].charAt(x);
 }
 
 function typeWriter() {
@@ -79,49 +98,22 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
     else {
-        if (spanIndex < HTMLCollectionSpans.length) { 
+        if (spanIndex < HTMLCollectionSpans.length) {
             if (charIndex < arr[spanIndex].length) {
                 console.log(arr[spanIndex] + ", " + arr[spanIndex].charAt(charIndex));
                 HTMLCollectionSpans[spanIndex].innerHTML += arr[spanIndex].charAt(charIndex++);
                 //charIndex++;
-                setTimeout(typeWriter, speed*10);
+                setTimeout(typeWriter, speed * 10);
             }
             else {
                 charIndex = 0;
                 spanIndex++;
-            } 
+            }
             setTimeout(typeWriter, speed);
-        }
+        } else
+            setTimeout(typing(), speed * 2);
     }
 }
-
-//function typeWriter2() {
-//    var arr = {
-//        txt1: "<",
-//        txt2: "div ",
-//        txt3: "class ",
-//        txt4: "= ",
-//        txt5: "'Languages'",
-//        txt6: ">"
-//    }
-//    nextWord(arr);
-//}
-//function nextWord(arr) {
-//    for (var key in arr) {
-//        typing(key, arr[key], 0);
-//    }
-//}
-//function typing(k, val, j) {
-//    if (j < val.length) {
-//        document.querySelector("." + k).innerHTML += val.charAt(j);
-//        j++;
-//        setTimeout(function () {
-//            typing(k, val, j);
-//        }, 200);
-//    }
-//}
-
-
 
 
 $.fn.isInViewport = function () {
@@ -134,38 +126,11 @@ $.fn.isInViewport = function () {
 };
 
 $(window).on('resize scroll', function () {
-    $('#skills').each(function () {
+    $('.techSkills-left').each(function () {
         if (!skillsTxtOn && $(this).isInViewport()) {
             typeWriter();
             skillsTxtOn = true;
         }
     });
 });
-
-
-/*(function () {
-    $('#carousel-item').carousel({
-        interval: 4000
-    });
-}());
-
-(function () {
-    $('.carousel-multiItem  .item').each(function () {
-        var itemToClone = $(this);
-        for (var i = 1; i < 3; i++) {
-            itemToClone = itemToClone.next();
-
-            if (!itemToClone.length) {
-                itemToClone = $(this).siblings(':first');
-            }
-
-            itemToClone.children(':first-child').clone()
-                .addClass("cloneditem-" + (i))
-                .appendTo($(this));
-
-            $(".carousel-multiItem ").find(".item").css("transition", "   500ms ease-in-out all  ").css("transition", "  500ms ease-in-out all").css("backface-visibility", "visible").css("transform", "none!important")
-
-        }
-    });
-}());*/
 

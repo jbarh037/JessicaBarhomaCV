@@ -95,15 +95,27 @@ body {
 #about .row div {
     /*text-align: center;*/
     display: flex;
+    /*height:*/ 
     align-items: center;
     justify-content:center;
     max-height: 300px;
     color: grey;
     padding:20px;
 }
+
+#about .row div:first-child {
+    display: table;
+}
+
+#about .d-flex {
+    align-items: center;
+    justify-content: center;
+}
+
 #about .row div:nth-child(2) img {
-    width: auto;
-    height: 80%;
+    width: -webkit-fill-available;
+    max-height: 250px;
+    max-width: 250px;
 }
 .contactInfo {
     flex-direction: column;
@@ -112,9 +124,43 @@ body {
 .contactInfo > span, .contactInfo > p {
     width:80%;
 }
-.fa-envelope {
-    color: #D44638;
+/*.envelope {
     margin-left: 15%;
+    height: 55px;
+}
+*/
+.envelope img {
+    height: 55px;
+}
+.envelope:hover {
+    text-shadow: 0 0;
+    transform: scale(1.2);
+}
+
+.item1, .item2, .item3 {
+    display: inline-flex;
+}
+
+.item1 p, .item2 p, .item3 p {
+    margin-left: 10%;
+    line-height: 2;
+    align-self: center;
+}
+
+.fa-linkedin {
+    width: 55px;
+    height: 55px;
+    color:rgb(97,208,212);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+}
+
+.grid-container > span {
+    text-align: center;
 }
 
 
@@ -182,14 +228,17 @@ body {
 .console {
     padding: 20px;
 }
-.console-txt {
+.console-txt, .softSkills-txt {
     text-align: left;
     height:inherit;
     padding-left: 2%;
 }
 
 /* Section 2.2: Soft Skills*/
-.softSkills-right {  padding: 20px;   }
+.softSkills-right {  
+    padding: 20px;                
+    padding-top: 46px; 
+}
 
 
 /*Section 3: Work Experience*/
@@ -233,23 +282,25 @@ body {
     color: grey;
 }
 .statcan1_desc > ul, 
-.console-txt > ul {
+.console-txt > ul,
+.softSkills-txt > ul {
     list-style-type: "- ";
     /*color: grey;*/
 }
 
+.softSkills-txt {
+    margin-top: 8%;
+}
 
 /*responsive mobile view*/
+
 @media screen and (max-width: 767px) {
-    .row {
+    /*.row {
         display: block !important;
         margin: 0;
-    }
+    }*/
     .introText p {
         width: 90%;
-    }
-    #about .row div:nth-child(1) {
-        display:none;
     }
     #about .row div:nth-child(2),
     #about .row div:nth-child(3) {
@@ -257,15 +308,47 @@ body {
         padding: 0;
     }
     #about .row div:nth-child(2) img {
-        width: -webkit-fill-available;
+        width: auto;
+        max-width: -webkit-fill-available;
         height: auto;
-        max-height: 290px;
+        max-height: 250px;
         margin: 10px;
-    } 
+    }
+    .item1 p, .item2 p, .item3 p {
+        overflow-wrap:anywhere;
+    }
     .workTitle {
         padding: 20px 0;
     } 
     html, body, nav {
         overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .row {
+        display: block !important;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container p {
+        display: none;
+    }
+    .col-sm-6 {
+        width:100%;
+    }
+
+    .item1, .item2, .item3 {
+        display: table;
+    }
+    .grid-container {
+        grid-template-rows: 0;
+        grid-template-columns: auto auto auto;
+    }
+    .contactInfo {
+        height: 80px !important;
+        justify-content: flex-start !important;
     }
 }
