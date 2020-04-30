@@ -295,10 +295,14 @@ body {
 /*responsive mobile view*/
 
 @media screen and (max-width: 767px) {
-    /*.row {
+    .row {
         display: block !important;
         margin: 0;
-    }*/
+    }
+    #edu {
+        display: flex !important;
+        flex-flow:wrap-reverse;
+    }
     .introText p {
         width: 90%;
     }
@@ -326,7 +330,7 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-    .row {
+    #about .row, #skills .row {
         display: block !important;
         margin: 0;
     }
